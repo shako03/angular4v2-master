@@ -1,0 +1,10 @@
+<div class="cont" *ngIf="visible">
+      <app-card
+      *ngFor="let studentFromParent of studentData let i = index"
+      [student]="studentFromParent"
+      [ind]="i"
+      (deleteSt)="delete($event)"
+      (editSt)="edit($event)"
+
+      ></app-card>
+</div>

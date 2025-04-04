@@ -1,0 +1,17 @@
+
+
+
+
+<div class="cont">
+      <div class="card">
+            <p>{{student!.name}}</p>
+            <p>{{student!.age}}</p>
+            <p>{{student!.grade}}</p>
+            <p>{{student!.address.street}}</p>
+            <p>{{student!.address.city}}</p>
+            <p>{{student!.address.zip}}</p>
+            <button (click)="delete(ind)" class="btn btn-danger">Delete</button>
+            <button (click)="edit(ind)" class="btn btn-warning">Edit</button>
+         </div>
+</div>
+

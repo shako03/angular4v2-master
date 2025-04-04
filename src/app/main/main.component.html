@@ -1,0 +1,42 @@
+
+
+
+
+
+<main>
+      <form #studentForm="ngForm"
+       (ngSubmit)="save(studentForm)">   <!--მთლიან ფორმას ასაბმითებს -->
+
+            <input name="name" type="text" [(ngModel)] = "newStudent.name">
+            <input name="age" type="nymber" [(ngModel)] = "newStudent.age">
+            <input name="grade" type="text" [(ngModel)] = "newStudent.grade">
+            <input name="subject" type="text" [(ngModel)] = "newStudent.subject">
+            <input name="isEnrolled" type="checkbox" [(ngModel)] = "newStudent.isEnrolled">
+         
+            <input name="street" type="text" [(ngModel)] = "newStudent.address.street">
+            <input name="city" type="text" [(ngModel)] = "newStudent.address.city">
+            <input name="zip" type="number" [(ngModel)] = "newStudent.address.zip">
+
+            <button type="submit"> save </button>
+
+      </form>
+      <button (click)="showList()">show list</button>
+</main>
+
+<button routerLink="/details/{{id}}">go to details</button>
+
+
+<app-display-data 
+[studentData]="studentArr"
+[visible]="isVisible"
+(deleteSt)="deleteStudent($event)"
+(editSt)="editStudent($event)"
+
+></app-display-data>
+
+
+
+
+
+
+
