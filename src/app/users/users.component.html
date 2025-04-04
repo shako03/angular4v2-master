@@ -1,0 +1,11 @@
+
+<main>
+      <div class="card" *ngFor="let user of userArr; let ind = index">
+            <div class="card-body">
+                  <h5>{{user.first_name}}</h5>
+                  <h5>{{user.last_name}}</h5>
+                  <p>{{user.email}}</p>
+                  <a routerLink="/details/{{user.id}}">see more</a>
+            </div>
+      </div>
+</main>

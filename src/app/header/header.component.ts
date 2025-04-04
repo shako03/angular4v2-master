@@ -12,5 +12,6 @@ export class HeaderComponent {
 
   activeClass = "active"
 
+  TextFromHeader = "Hello From Header Component"
 
 }

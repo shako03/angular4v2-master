@@ -3,12 +3,14 @@ import { MainComponent } from './main/main.component';
 import { HomeComponent } from './home/home.component';
 import { Error404Component } from './error-404/error-404.component';
 import { DetailsComponent } from './details/details.component';
+import { UsersComponent } from './users/users.component';
 
 export const routes: Routes = [
       {path:"", redirectTo:"Main", pathMatch:"full"}, //აუცილებლად უნდა ეწეროს ეს თავში
       {path:"Main", component:MainComponent},  
       {path:"Home", component:HomeComponent},
       {path:"details/:id", component:DetailsComponent},
+      {path:"user", component:UsersComponent},
 
 
 
